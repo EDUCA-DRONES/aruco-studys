@@ -8,6 +8,9 @@ class ImageCapturerOpenCV(VideoCapturer):
         self.frame = cv2.imread('/home/junior/Documentos/EDUCA DRONES/aruco-study/imgs/test5.jpg')
         self.ret = True
     
+    def colorToGray(self):
+        return cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY)
+    
     def release(self):
         pass
         

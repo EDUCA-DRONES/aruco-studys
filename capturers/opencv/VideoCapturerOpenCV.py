@@ -9,6 +9,9 @@ class VideoCapturerOpenCV(VideoCapturer):
         self.ret = None
         self.frame = None
         
+    def colorToGray(self):
+        return cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY)
+    
     def getFrame(self):
         self.ret, self.frame = self.cap.read()
     
